@@ -1,10 +1,12 @@
 # rpi-mongo
 
+This repository is forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo)
+
 This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for [Raspberry Pi](https://www.raspberrypi.org/) published to the public [Docker Hub](https://hub.docker.com/r/nonoroazoro/).
 
 ### Base Docker Image
 
-* [resin/rpi-raspbian:jessie](https://github.com/resin-io-library/resin-rpi-raspbian)
+* [resin/rpi-raspbian:stretch](https://github.com/resin-io-library/resin-rpi-raspbian)
 
 ### Installation
 
@@ -24,6 +26,6 @@ This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for [R
 
 1. Run `mongod`:
 
-    `docker run -it -p 27017:27017 --name mongodb nonoroazoro/rpi-mongo`
+    `docker run -it -p 27017:27017 --name mongodb hirotochigi/rpi-mongo`
 
 2. For more usage details, please refer to [mongo](https://hub.docker.com/_/mongo/).
