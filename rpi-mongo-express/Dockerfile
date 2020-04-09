@@ -1,4 +1,4 @@
-FROM rpi-node-second 
+FROM hirotochigi/rpi-node
 
 # grab tini for signal processing and zombie killing
 ENV TINI_VERSION 0.13.0
