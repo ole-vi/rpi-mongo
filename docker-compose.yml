@@ -3,14 +3,14 @@ version: '3'
 services:
 
   mongo:
-    image: hirotochigi/rpi-mongo
+    image: treehouses/rpi-mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
 
   mongo-express:
-    image: hirotochigi/rpi-mongo-express-docker 
+    image: treehouses/rpi-mongo-express
     restart: always
     ports:
       - 8090:8081
