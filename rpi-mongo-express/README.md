@@ -12,7 +12,7 @@ rpi-mongo-express is a web-based MongoDB admin interface written in Node.js, Exp
 # How to use this image
 
 ```console
-$ docker run --link some_mongo_container:mongo -p 8081:8081 ind3x/rpi-mongo-express
+$ docker run --link some_mongo_container:mongo -p 8081:8081 treehouses/rpi-mongo-express
 ```
 
 Then you can hit `http://localhost:8081` or `http://host-ip:8081` in your browser.
@@ -62,7 +62,7 @@ The following are only needed if `ME_CONFIG_MONGODB_ENABLE_ADMIN` is **"false"**
 		-e ME_CONFIG_OPTIONS_EDITORTHEME="ambiance" \
 		-e ME_CONFIG_BASICAUTH_USERNAME="user" \
 		-e ME_CONFIG_BASICAUTH_PASSWORD="fairly long password" \
-		ind3x/rpi-mongo-express
+		treehouses/rpi-mongo-express
 
 This example links to a container name typical of `docker-compose`, changes the editor's color theme, and enables basic authentication.
 
