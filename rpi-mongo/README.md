@@ -17,7 +17,7 @@ but the container uses the special compiled MongoDB version3 thanks to [Dominic 
 
 #### MongoDB v2:
 
-    `docker run -it -p 27017:27017 -p 28017:28017 --name mongodb hirotochigi/rpi-mongo`
+    `docker run -it --init -p 27017:27017 -p 28017:28017 --name mongodb hirotochigi/rpi-mongo`
     
 #### MongoDB v3:
 
