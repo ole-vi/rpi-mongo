@@ -13,26 +13,14 @@ This Dockerfile is also started from [nonoroazoro/rpi-mongo](https://github.com/
 [this MongoDB](https://github.com/ddcc/mongodb/releases). Usually, 32bit machine cannot use MongoDB version3, 
 but the container uses the special compiled MongoDB version3 thanks to [Dominic Chen](https://www.dcddcc.com/blog/2018-06-09-building-mongodb-for-32-bit-ARM-on-debian-ubuntu.html).
 
-### Base Docker Image
-
-* [resin/rpi-raspbian:stretch](https://github.com/resin-io-library/resin-rpi-raspbian)
-
-### Installation
-
-1. Install [Docker for Raspberry Pi](http://blog.hypriot.com/).
-
-2. Download from [Docker Hub](https://hub.docker.com/u/nonoroazoro/):
-
-    `docker pull hirotochigi/rpi-mongo`
-
-3. Alternatively, you can build an image from Dockerfile (**In you Raspberry Pi**):
-
-    1. `docker build -t="rpi-mongo" github.com/ole-vi/rpi-mongo`
-
 ### Usage
 
-1. Run `mongod`:
+#### MongoDB v2:
 
-    `docker run -it -p 27017:27017 --name mongodb hirotochigi/rpi-mongo`
+    `docker run -it -p 27017:27017 -p 28017:28017 --name mongodb hirotochigi/rpi-mongo`
+    
+#### MongoDB v3:
 
-2. For more usage details, please refer to [mongo](https://hub.docker.com/_/mongo/).
+     `docker run -it -p 27017:27017 --name mongodb hirotochigi/rpi-mongo:3`
+ 
+For more usage details, please refer to [mongo](https://hub.docker.com/_/mongo/).
