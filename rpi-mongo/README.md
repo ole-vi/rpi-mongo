@@ -7,7 +7,7 @@ This container is forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroa
 This container is also forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo) but uses
 [this MongoDB](https://github.com/ddcc/mongodb/releases)
 
-This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for [Raspberry Pi](https://www.raspberrypi.org/) published to the public [Docker Hub](https://hub.docker.com/r/nonoroazoro/).
+This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for [Raspberry Pi](https://www.raspberrypi.org/) published to the public [Docker Hub](https://hub.docker.com/repository/docker/treehouses/rpi-mongo).
 
 ### Base Docker Image
 
