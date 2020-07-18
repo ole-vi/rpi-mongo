@@ -1,6 +1,11 @@
 # rpi-mongo
 
-This repository is forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo)
+There are two containers for MongoDB
+1. MongoDB v2
+This container is forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo)
+1. MongoDB v3
+This container is also forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo) but uses
+[this MongoDB](https://github.com/ddcc/mongodb/releases)
 
 This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for [Raspberry Pi](https://www.raspberrypi.org/) published to the public [Docker Hub](https://hub.docker.com/r/nonoroazoro/).
 
