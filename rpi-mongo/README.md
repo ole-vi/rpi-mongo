@@ -17,10 +17,10 @@ but the container uses the special compiled MongoDB version3 thanks to [Dominic 
 
 #### MongoDB v2:
 
-    `docker run -it --init -p 27017:27017 -p 28017:28017 --name mongodb hirotochigi/rpi-mongo`
+    `docker run -it --init -p 27017:27017 -p 28017:28017 --name mongodb treehouses/rpi-mongo`
     
 #### MongoDB v3:
 
-     `docker run -it -p 27017:27017 --name mongodb hirotochigi/rpi-mongo:3`
+     `docker run -it -p 27017:27017 --name mongodb treehouses/rpi-mongo:3`
  
 For more usage details, please refer to [mongo](https://hub.docker.com/_/mongo/).
