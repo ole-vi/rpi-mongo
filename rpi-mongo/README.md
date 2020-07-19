@@ -1,32 +1,29 @@
 # rpi-mongo
 
-This repository is forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo)
+There are two Dockerfiles in rpi-mongo repository
 
-This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for [Raspberry Pi](https://www.raspberrypi.org/) published to the public [Docker Hub](https://hub.docker.com/r/nonoroazoro/).
+This repository contains two Dockerfiles of [MongoDB](http://www.mongodb.org/) for [Raspberry Pi](https://www.raspberrypi.org/) published to the public [Docker Hub](https://hub.docker.com/repository/docker/treehouses/rpi-mongo).
 
-### Base Docker Image
+1. MongoDB v2:
 
-* [resin/rpi-raspbian:stretch](https://github.com/resin-io-library/resin-rpi-raspbian)
+This Dockerfile is forked from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo)
+1. MongoDB v3:
 
-### Installation
-
-1. Install [Docker for Raspberry Pi](http://blog.hypriot.com/).
-
-2. Download from [Docker Hub](https://hub.docker.com/u/nonoroazoro/):
-
-    `docker pull hirotochigi/rpi-mongo`
-
-3. Alternatively, you can build an image from Dockerfile (**In you Raspberry Pi**):
-
-    1. `docker build -t="rpi-mongo" github.com/ole-vi/rpi-mongo`
+This Dockerfile is also started from [nonoroazoro/rpi-mongo](https://github.com/nonoroazoro/rpi-mongo) but uses
+[this MongoDB](https://github.com/ddcc/mongodb/releases). Usually, 32bit machine cannot use MongoDB version3, 
+but the container uses the special compiled MongoDB version3 thanks to [Dominic Chen](https://www.dcddcc.com/blog/2018-06-09-building-mongodb-for-32-bit-ARM-on-debian-ubuntu.html).
 
 ### Usage
 
-1. Run `mongod`:
+#### MongoDB v2:
 
-    `docker run -it -p 27017:27017 --name mongodb hirotochigi/rpi-mongo`
+    `docker run -it --init -p 27017:27017 -p 28017:28017 --name mongodb treehouses/rpi-mongo`
+    
+#### MongoDB v3:
 
-2. For more usage details, please refer to [mongo](https://hub.docker.com/_/mongo/).
+     `docker run -it -p 27017:27017 --name mongodb treehouses/rpi-mongo:3`
+ 
+For more usage details, please refer to [mongo](https://hub.docker.com/_/mongo/).
 
 ### Build
 
@@ -42,3 +39,4 @@ This repository contains Dockerfile of [MongoDB](http://www.mongodb.org/) for [R
 This command will force docker to pull arm version of the base image and will also set arm architecture to your result image. But be careful, if you use tags with multiple architectures, the command above will set the tag to arm version. So to run the native amd64 version you will need to pull the tag again without --platform arg.
 
 [source](https://stackoverflow.com/questions/47809904/how-to-set-architecture-for-docker-build-to-arm64)
+
