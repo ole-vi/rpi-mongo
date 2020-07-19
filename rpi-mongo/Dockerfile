@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM resin/rpi-raspbian:stretch
+FROM balenalib/raspberry-pi:stretch
 
 # Add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added.
 RUN groupadd -r mongodb && useradd -r -g mongodb mongodb
